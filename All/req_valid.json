@@ -1,0 +1,6 @@
+[
+    [2, "5722583fb050460caed6b5f15171f89c", "BootNotification", {"chargePointVendor": "Imagine BV", "chargePointModel": "FC42", "firmwareVersion": "v1.0"}],
+    [2, "19223202", "Heartbeat", {}],
+    [2, "5722583fb050460caed6b5f15171f89c", "Authorize", {"idTag": "TK_001"}],
+    [2, "5be7d8b3ef0a4e36b8d42d6f9172af9b", "StartTransaction", {"connectorId": 1, "idTag": "TK_001", "meterStart": 12345, "timestamp": "2024-07-29T08:26:58.5397103Z"}]
+]
