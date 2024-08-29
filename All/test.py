@@ -133,7 +133,7 @@ def validate_response_fields(ws, response_message):
             if ws.saved_transactionId != ws.current_request[3].get("transactionId"):
                 print(f"Validation failed: transactionId in MeterValues does not match transactionId from StartTransaction.\n")
                 return False
-            time.sleep(20)   
+            time.sleep(60)   
 
             # Validate connectorId ToDo     
                 
@@ -180,8 +180,9 @@ def send_next_request(ws):
     current_request = ws.request_messages[ws.current_request_index]
 
     if current_request[2] == "StartTransaction":
-        ws.current_time = datetime.datetime.now() - datetime.timedelta(hours=2)
-        current_request[3]["timestamp"] = ws.current_time.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + '7254'+ 'Z'
+        ws.current_time = datetime.datetime.now() 
+        startTransaction_time = ws.current_time - datetime.timedelta(hours=2)
+        current_request[3]["timestamp"] = startTransaction_time.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + '7254'+ 'Z'
         ws.saved_timestamp = current_request[3]["timestamp"]
 
     if current_request[2] == "MeterValues":    
@@ -211,7 +212,8 @@ def send_next_request(ws):
             print(f"Error: Missing transactionId for StopTransaction request.")
             return
         
-        current_request[3]["transactionId"] = ws.saved_transactionId         
+        current_request[3]["transactionId"] = ws.saved_transactionId
+        current_request[3]["timestamp"] =  ws.current_time.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + '7254'+ 'Z'     
 
     print(f"Sending request: {current_request}")
 
