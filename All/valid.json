@@ -1,0 +1,16 @@
+[
+    [2, "5722583fb050460caed6b5f15171f89c", "BootNotification", {"chargePointVendor": "Imagine BV", "chargePointModel": "FC42", "firmwareVersion": "v1.0"}],
+    [2, "17223202", "Heartbeat", {}],
+    [2, "7722583fb050460caed6b5f15171f89c", "StatusNotification", {"connectorId": 1, "errorCode": "ConnectorLockFailure", "status": "Available", "timestamp": "2024-07-29T10:38:53.2488345Z"}],
+    [2, "5722583fb050460caed6b5f15171f89c", "Authorize", {"idTag": "TK_001"}],
+    [2, "8722583fb050460caed6b5f15171f89c", "StatusNotification", {"connectorId": 1, "errorCode": "ConnectorLockFailure", "status": "Preparing", "timestamp": "2024-07-29T10:38:53.2488345Z"}],
+    [2, "5be7d8b3ef0a4e36b8d42d6f9172af9b", "StartTransaction", {"connectorId": 1, "idTag": "TK_001","meterStart": 1200,"timestamp": "2024-07-29T08:26:58.5397103Z"}],
+    [2,"bd3fd394c8ac414b81d0eb175f75a52b","MeterValues",{"connectorId":1,"transactionId":1816223083,"meterValue":[{"timestamp":"2024-08-21T07:13:39.318825Z","sampledValue":[{"value":"1500","context":"Sample.Periodic","measurand":"Energy.Active.Import.Register","phase":"L1","location":"Outlet","unit":"Wh"}]}]}],
+    [2, "7322583fb050460caed6b5f15171f89c", "StatusNotification", {"connectorId": 1, "errorCode": "ConnectorLockFailure", "status": "Charging", "timestamp": "2024-07-29T10:38:53.2488345Z"}],
+    [2,"bd3fd394c8ac414b81d0eb175f75a52b","MeterValues",{"connectorId":1,"transactionId":1816223083,"meterValue":[{"timestamp":"2024-08-21T07:13:39.318825Z","sampledValue":[{"value":"1800","context":"Sample.Periodic","measurand":"Energy.Active.Import.Register","phase":"L1","location":"Outlet","unit":"Wh"}]}]}],
+    [2, "5be7d8b3ef0a4e36b8d42d6f9172af9b", "StopTransaction", {"connectorId": 1, "idTag": "TK_001","meterStop": 1800,"timestamp": "2024-08-29T13:37:45.7907254Z","transactionId": 1816223083}],
+    [2, "17223202", "Heartbeat", {}],
+    [2, "7922583fb050460caed6b5f15171f89c", "StatusNotification", {"connectorId": 1, "errorCode": "ConnectorLockFailure", "status": "Finishing", "timestamp": "2024-07-29T10:38:53.2488345Z"}],
+    [2, "17223202", "Heartbeat", {}],
+    [2, "7722583fb050460caed6b5f15171f89c", "StatusNotification", {"connectorId": 1, "errorCode": "ConnectorLockFailure", "status": "Available", "timestamp": "2024-07-29T10:38:53.2488345Z"}]
+]
